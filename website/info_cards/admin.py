@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import BasicInfoCard, DetailInfoCard
 
-# Register your models here.
+admin.site.register(BasicInfoCard)
+admin.site.register(DetailInfoCard)

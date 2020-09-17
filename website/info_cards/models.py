@@ -1,6 +1,8 @@
+import datetime
 from django.db import models
 from django.utils import timezone
-
+#uproscić wszystko tworzac klasę nadrzędną do 4 poniższych, umożliwiając
+#adminowi dodawanie nowych charakterystyk? class AnimalInfo
 class Species(models.Model):
     species = models.CharField(max_length=50)
 

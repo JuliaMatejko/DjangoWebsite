@@ -7,8 +7,8 @@
   <body>
     {% if latest_added_infocards %}
         <ul>
-        {% for card in latest_added_infocards %}
-            <li><a href="/info-cards/{{ card.id }}/">{{ card.name }}, {{ card.date_of_registration }}, {{ card.species }}, {{ card.breed }}, {{ card.sex }}, {{ card.age }}, {{ card.size }}</a></li>
+        {% for infocard in latest_added_infocards %}
+            <li><a href="{% url 'info_cards:detail' infocard.id %}">{{ infocard.name }}, {{ infocard.date_of_registration }}, {{ infocard.species }}, {{ infocard.breed }}, {{ infocard.sex }}, {{ infocard.age }}, {{ infocard.size }}</a></li>
         {% endfor %}
         </ul>
     {% else %}
